@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function App() {
   return (
-    <View style={styles.body}>
+    <View>
       <AppHeader />
       <View style={styles.plusIcon}>
         <Icon
@@ -19,7 +19,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  body: {},
   plusIcon: {
     margin: 15,
     alignItems: 'flex-end'
