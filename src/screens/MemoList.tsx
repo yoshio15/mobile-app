@@ -1,16 +1,10 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
 import AppHeader from '../components/AppHeader';
 import PlusIcon from '../components/PlusIcon';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { RootStackParamList, MemoListProps } from '../types'
 
-type RootStackParamList = {
-  MemoList: undefined;
-  NewMemo: undefined;
-}
-
-type Props = StackScreenProps<RootStackParamList, 'MemoList'>;
 
 
 const styles = StyleSheet.create({
@@ -20,7 +14,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const MemoList = ({ route, navigation }: Props) => {
+const MemoList = ({ route, navigation }: MemoListProps) => {
   return (
     <View>
       <AppHeader />

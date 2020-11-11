@@ -1,12 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamList } from './types'
 import MemoList from './screens/MemoList'
 import NewMemo from './screens/NewMemo'
-
-type RootStackParamList = {
-  MemoList: undefined;
-  NewMemo: undefined;
-}
 
 const Stack = createStackNavigator<RootStackParamList>();
 
