@@ -6,7 +6,7 @@ import NewMemo from './screens/NewMemo'
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-const RootStack = () => {
+const RootStack: React.FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name='MemoList' component={MemoList}/>

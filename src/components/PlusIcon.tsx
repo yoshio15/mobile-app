@@ -6,7 +6,7 @@ type Props = {
   navigation: any
 }
 
-const PlusIcon = (props: Props) => {
+const PlusIcon: React.FC<Props> = (props: Props) => {
   return (
     <View style={styles.plusIcon}>
       <Icon
