@@ -4,7 +4,7 @@ import { Card } from 'react-native-elements';
 import PlusIcon from '../components/PlusIcon';
 import { MemoListProps } from '../types'
 
-const MemoList: React.FC<MemoListProps> = ({ route, navigation }: MemoListProps) => {
+const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps) => {
   return (
     <View>
       <PlusIcon navigation={navigation}></PlusIcon>
