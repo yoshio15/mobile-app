@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type Props = {
@@ -9,11 +10,18 @@ type Props = {
 const PlusIcon: React.FC<Props> = (props: Props) => {
   return (
     <View style={styles.plusIcon}>
-      <Icon
-        name="plus-circle"
-        size={60}
-        color='#00008b'
-        onPress={() => props.navigation.navigate('NewMemo')}
+      <Button
+        title=' add memo'
+        type='outline'
+        raised
+        icon={
+          <Icon
+            name="plus-circle"
+            size={30}
+            color='#0275d8'
+            onPress={() => props.navigation.navigate('NewMemo')}
+          />
+        }
       />
     </View>
   );
