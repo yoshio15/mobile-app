@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-import AppHeader from '../components/AppHeader';
-import { Input } from 'react-native-elements'
 
 const NewMemo: React.FC = () => {
   return (
