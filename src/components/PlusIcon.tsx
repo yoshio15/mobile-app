@@ -14,12 +14,12 @@ const PlusIcon: React.FC<Props> = (props: Props) => {
         title=' add memo'
         type='outline'
         raised
+        onPress={() => props.navigation.navigate('NewMemo')}
         icon={
           <Icon
             name="plus-circle"
             size={30}
             color='#0275d8'
-            onPress={() => props.navigation.navigate('NewMemo')}
           />
         }
       />
