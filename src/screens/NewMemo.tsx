@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-import * as SQLite from 'expo-sqlite';
 
 const NewMemo: React.FC = () => {
-  useEffect(() => {
-    console.log('useEffect')
-    const DB_NAME = 'memo-app';
-    const db = SQLite.openDatabase(DB_NAME);
-    console.log(db);
-  });
   return (
     <View style={styles.textAreaContainer}>
       <TextInput
