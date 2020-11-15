@@ -22,7 +22,23 @@ const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps
         tx.executeSql(
           CREATE_DB_SQL,
           null,
-          () => { console.log('success') },
+          db.transaction(
+            // callback
+            (tx) => {
+              tx.executeSql(
+                SELECT_ALL_SQL,
+                null,
+                (_, { rows: {_array} }) => {
+                  console.log('SELECT_ALL')
+                  console.log('array: ' + _array)
+                }
+              )
+            },
+            // error
+            () => { console.log('fail') },
+            // succuess
+            () => { console.log('success') }
+          ),
           () => { console.log('fail') }
         )
       },
