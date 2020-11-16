@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import * as SQLite from 'expo-sqlite';
+import { WebSQLDatabase } from 'expo-sqlite/src/SQLite.types';
 
 import PlusIcon from '../components/PlusIcon';
 import { MemoListProps } from '../types';
@@ -14,10 +15,13 @@ const CREATE_DB_SQL = 'create table if not exists memos (memo_id integer primary
 const SELECT_ALL_SQL = 'select * from memos;'
 const INSERT_DATA_SQL = `insert into ${DB_NAME} values (?, ?);`
 
+// Database
+let db: WebSQLDatabase;
+
 const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps) => {
 
   useEffect(() => {
-    const db = SQLite.openDatabase(DB_NAME);
+    db = SQLite.openDatabase(DB_NAME);
     console.log(db);
     db.transaction(
       // callback
