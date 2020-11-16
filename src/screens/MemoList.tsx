@@ -35,6 +35,25 @@ const insert = (id:number, content: string) => {
   )
 }
 
+// Create Table
+const createTable = () => {
+  db.transaction(
+    (tx) => {
+      tx.executeSql(
+        CREATE_DB_SQL,
+        null,
+        // succuess
+        () => { console.log('create table success.') },
+        () => { console.log('create table failed.') }
+      )
+    },
+    // error
+    () => { console.log('fail') },
+    // succuess
+    () => { console.log('success') }
+  )
+}
+
 const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps) => {
 
   useEffect(() => {
