@@ -8,8 +8,11 @@ import { MemoListProps } from '../types';
 
 // constants
 const DB_NAME = 'memo-app';
+
+// SQL
 const CREATE_DB_SQL = 'create table if not exists memos (memo_id integer primary key not null, content text);'
-const SELECT_ALL_SQL = 'select * from memos';
+const SELECT_ALL_SQL = 'select * from memos;'
+const INSERT_DATA_SQL = `insert into ${DB_NAME} values (?, ?);`
 
 const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps) => {
 
