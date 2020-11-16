@@ -11,7 +11,7 @@ import { MemoListProps } from '../types';
 const DB_NAME = 'memo-app';
 
 // SQL
-const CREATE_DB_SQL = 'create table if not exists memos (memo_id integer primary key not null, content text);'
+const CREATE_TABLE_SQL = 'create table if not exists memos (memo_id integer primary key not null, content text);'
 const SELECT_ALL_SQL = 'select * from memos;'
 const INSERT_DATA_SQL = `insert into ${DB_NAME} values (?, ?);`
 
@@ -40,7 +40,7 @@ const createTable = () => {
   db.transaction(
     (tx) => {
       tx.executeSql(
-        CREATE_DB_SQL,
+        CREATE_TABLE_SQL,
         null,
         // succuess
         () => { console.log('create table success.') },
@@ -63,7 +63,7 @@ const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps
       // callback
       (tx) => {
         tx.executeSql(
-          CREATE_DB_SQL,
+          CREATE_TABLE_SQL,
           null,
           db.transaction(
             // callback
