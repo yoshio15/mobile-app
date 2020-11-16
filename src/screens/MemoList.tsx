@@ -47,10 +47,6 @@ const createTable = () => {
         () => { console.log('create table failed.') }
       )
     },
-    // error
-    () => { console.log('fail') },
-    // succuess
-    () => { console.log('success') }
   )
 }
 
