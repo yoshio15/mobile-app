@@ -42,7 +42,6 @@ const createTable = () => {
       tx.executeSql(
         CREATE_TABLE_SQL,
         null,
-        // succuess
         () => { console.log('create table success.') },
         () => { console.log('create table failed.') }
       )
