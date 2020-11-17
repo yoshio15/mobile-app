@@ -50,6 +50,23 @@ const createTable = () => {
   )
 }
 
+// Select All
+const selectAll = () => {
+  db.transaction(
+    (tx) => {
+      tx.executeSql(
+        SELECT_ALL_SQL,
+        null,
+        (_, { rows: {_array} }) => {
+          console.log('select all sccess.')
+          console.log('array: ' + _array)
+        },
+        () => { console.log('select all failed.') }
+      )
+    },
+  )
+}
+
 const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps) => {
 
   useEffect(() => {
