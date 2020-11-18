@@ -97,10 +97,6 @@ const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps
           () => { console.log('fail') }
         )
       },
-      // error
-      () => { console.log('fail') },
-      // succuess
-      () => { console.log('success') }
     )
   });
 
