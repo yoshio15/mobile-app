@@ -72,13 +72,11 @@ const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps
     db = SQLite.openDatabase(DB_NAME);
     console.log(db);
     db.transaction(
-      // callback
       (tx) => {
         tx.executeSql(
           CREATE_TABLE_SQL,
           null,
           db.transaction(
-            // callback
             (tx) => {
               tx.executeSql(
                 SELECT_ALL_SQL,
@@ -89,9 +87,7 @@ const MemoList: React.FC<MemoListProps> = ({ _route, navigation }: MemoListProps
                 }
               )
             },
-            // error
             () => { console.log('fail') },
-            // succuess
             () => { console.log('success') }
           ),
           () => { console.log('fail') }
