@@ -3,7 +3,6 @@ import { View, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 import * as SQLite from 'expo-sqlite';
 import { WebSQLDatabase } from 'expo-sqlite/src/SQLite.types';
-
 import PlusIcon from '../components/PlusIcon';
 import { MemoListProps } from '../types';
 
