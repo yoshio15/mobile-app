@@ -1,16 +1,23 @@
 import React from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
+import { Button } from 'react-native-elements';
 
 const NewMemo: React.FC = () => {
   return (
-    <View style={styles.textAreaContainer}>
-      <TextInput
-        style={styles.textArea}
-        multiline={true}
-        numberOfLines={10}
-        placeholder='Write Memo...'
-        placeholderTextColor="gray"
-      />
+    <View>
+      <View style={styles.textAreaContainer}>
+        <TextInput
+          style={styles.textArea}
+          multiline={true}
+          numberOfLines={10}
+          placeholder='Write Memo...'
+          placeholderTextColor="gray"
+        />
+      </View>
+      <Button
+        title='+ add'
+        raised
+      ></Button>
     </View>
   );
 }
