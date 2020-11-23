@@ -17,9 +17,14 @@ const NewMemo: React.FC = () => {
       <Button
         title='+ add'
         raised
+        onPress={() => { addMemo() }}
       ></Button>
     </View>
   );
+}
+
+const addMemo = () => {
+  console.log('addMemo')
 }
 
 const styles = StyleSheet.create({
