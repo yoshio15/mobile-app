@@ -9,8 +9,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 const RootStack: React.FC = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='MemoList' component={MemoList}/>
-      <Stack.Screen name='NewMemo' component={NewMemo}/>
+      <Stack.Screen name='MemoList' component={ MemoList }/>
+      <Stack.Screen name='NewMemo' component={ NewMemo }/>
     </Stack.Navigator>
   );
 }
