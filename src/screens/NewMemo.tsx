@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
 });
 
 const addMemo = () => {
-  console.log('addMemo')
   insert(1, "memo");
 }
 
