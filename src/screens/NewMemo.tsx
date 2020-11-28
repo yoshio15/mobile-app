@@ -43,10 +43,7 @@ const addMemo = () => {
   insert(1, "memo");
 }
 
-// Database
 let db: WebSQLDatabase;
-
-// Insert Data
 const insert = (id:number, content: string) => {
   db.transaction(
     (tx) => {
