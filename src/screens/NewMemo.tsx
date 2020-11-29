@@ -14,12 +14,12 @@ const NewMemo: React.FC = () => {
           style={styles.textArea}
           multiline={true}
           numberOfLines={10}
-          placeholder='Write Memo...'
+          placeholder=''
           placeholderTextColor="gray"
         />
       </View>
       <Button
-        title='+ add'
+        title='add'
         raised
         onPress={() => { addMemo() }}
       ></Button>
