@@ -17,23 +17,6 @@ const INSERT_DATA_SQL = `insert into ${DB_NAME} values (?, ?);`
 // Database
 let db: WebSQLDatabase;
 
-// Insert Data
-const insert = (id:number, content: string) => {
-  db.transaction(
-    (tx) => {
-      tx.executeSql(
-        INSERT_DATA_SQL,
-        [id, content],
-        () => { console.log('insert data success.') },
-        () => {
-          console.log('insert data failed.')
-          return false;
-        }
-      )
-    },
-  )
-}
-
 // Create Table
 const createTable = () => {
   db.transaction(
